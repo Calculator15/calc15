@@ -36,6 +36,25 @@ float Division(float a, float b)
 	}
 }
 
+int Roots(float *A, int a, int b, int c)
+{
+	int D;
+	D = b*b - 4*a*c;
+	if (D > 0)
+	{
+		A[0] = (-b + sqrt(D)) / (2 * a); 
+		A[1] = (-b - sqrt(D)) / (2 * a);
+		return 2;
+	}
+	else if (D == 0)
+	{
+		A[0] = -b / (2 * a);
+		return 1;
+	}
+	else 
+		return 0;
+}
+
 int Fact(int n)
 {
 	if (n == 1)
@@ -43,6 +62,7 @@ int Fact(int n)
 	else
 		return n*Fact(n-1);
 }
+
 float Trigonometry(int Option, float var)
 {
 	switch(Option)
@@ -104,3 +124,4 @@ float Trigonometry(int Option, float var)
 		}
     	default: return 0;
 	}
+}
