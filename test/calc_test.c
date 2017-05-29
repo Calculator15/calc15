@@ -218,3 +218,33 @@ CTEST (arithmetic_operation_14, arcctg)
     expected = 1.91;
     ASSERT_EQUAL_U(expected, result);
 }
+
+CTEST (arithmetic_operation_15, percent)
+{
+    float result = PercentageOfValue (100, 35);
+    float expected = 35;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = PercentageOfValue (86, 9);
+    expected = 7.74;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = PercentageOfValue (50, 50);
+    expected = 25;
+    ASSERT_EQUAL_U(expected, result);
+}
+
+CTEST (arithmetic_operation_16, degree)
+{
+    float result = Exponentiation(2, 5);
+    float expected = 32;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Exponentiation (8, 4);
+    expected = 4096;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Exponentiation (5, -1);
+    expected = 0.2;
+    ASSERT_EQUAL_U(expected, result);
+}
