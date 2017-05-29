@@ -4,8 +4,8 @@
 int main()
 {
 	int i, n, Option;
-	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division		\n5.Factorial		6.Exit\n");
-	while (Option != 6)
+	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division		\n5.Factorial	 \n6.Sin(x)		7.Exit\n");
+	while (Option != 7)
 	{	
 		printf("\nSelect one of the actions:  ");
 		scanf("%d", &Option);
@@ -52,6 +52,13 @@ int main()
 			printf("Enter the number, whose factorial you want to receive: ");
 			scanf("%d", &n);
 			printf("Factorial = %d", Fact(n));
+		}
+		if (Option == 6)
+		{
+			float angle;
+			printf("Enter the angle value: ");
+			scanf("%f",&angle);
+			printf("Sin(x) = %.3f\n", Trigonometry(Option, angle));
 		}
 	}
 	return 0;

@@ -43,3 +43,14 @@ int Fact(int n)
 	else
 		return n*Fact(n-1);
 }
+float Trigonometry(int Option, float var)
+{
+	switch(Option)
+	{
+		case 9:
+		{
+			return sin(var * Pi/180);
+			break;
+		}
+    	default: return 0;
+	}
