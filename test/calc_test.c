@@ -68,3 +68,15 @@ CTEST (arithmetic_operation_4, divis)
     expected = 9; 
     ASSERT_EQUAL_U(expected, result);
 }
+
+CTEST (arithmetic_operation_5, factor)
+{
+    float result = Fact (5); 
+    float expected = 120; 
+    ASSERT_EQUAL_U(expected, result);
+
+
+    result = Fact (8); 
+    expected = 40320; 
+    ASSERT_EQUAL_U(expected, result);
+}
