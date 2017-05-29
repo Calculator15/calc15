@@ -6,7 +6,7 @@ DIR = build/src
 DAR = src
 DUR = bin/calc
 
-all: Prog Testpr
+all: Prog 
 Prog: $(DUR)/$(EXECUTABLE)
 $(DIR)/main.o: $(DAR)/main.c 
 	@if [ ! -d $(DIR) ] ; then echo "creating $(DIR)" ; mkdir build ; mkdir build/src; fi

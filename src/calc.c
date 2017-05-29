@@ -3,6 +3,8 @@
 #include <math.h>
 #include <locale.h>
 
+#define Pi 3.1415
+
 float Addition(float *A, int n)
 {
 	int i; float result = 0;
