@@ -80,3 +80,24 @@ CTEST (arithmetic_operation_5, factor)
     expected = 40320; 
     ASSERT_EQUAL_U(expected, result);
 }
+
+CTEST (arithmetic_operation_6, equation)
+{   
+    float A[2] = {};
+    float result = Roots(A, 2, 1, 2); 
+    float expected = 0; 
+    ASSERT_EQUAL_U(expected, result);
+ 
+    Roots(A, 2, 5, -3); 
+    const float result1 = A[0];
+    const float result2 = A[1];
+    const float expected1 = 0.5;
+    const float expected2 = -3; 
+    ASSERT_EQUAL_U(expected1, result1);
+    ASSERT_EQUAL_U(expected2, result2);
+
+    Roots(A, 1, 6, 9); 
+    result = A[0];
+    expected = -3;
+    ASSERT_EQUAL_U(expected, result);
+}
