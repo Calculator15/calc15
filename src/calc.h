@@ -5,6 +5,7 @@ float Addition(float *, int);
 float Subtraction(float, float);
 float Multiplication(float *, int);
 float Division(float, float);
+int Fact(int);
 
 #endif
 

@@ -35,3 +35,11 @@ float Division(float a, float b)
 		return result;
 	}
 }
+
+int Fact(int n)
+{
+	if (n == 1)
+		return 1;
+	else
+		return n*Fact(n-1);
+}

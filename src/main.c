@@ -4,8 +4,8 @@
 int main()
 {
 	int i, n, Option;
-	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division				5. Exit\n");
-	while (Option != 5)
+	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division		\n5.Factorial		6.Exit\n");
+	while (Option != 6)
 	{	
 		printf("\nSelect one of the actions:  ");
 		scanf("%d", &Option);
@@ -46,6 +46,12 @@ int main()
 				printf("Error");
 			else
 				printf("Answer: %.2f\n", Division(a, b));
+		}
+		if (Option == 5)
+		{
+			printf("Enter the number, whose factorial you want to receive: ");
+			scanf("%d", &n);
+			printf("Factorial = %d", Fact(n));
 		}
 	}
 	return 0;
