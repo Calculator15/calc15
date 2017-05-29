@@ -88,5 +88,10 @@ float Trigonometry(int Option, float var)
 			return asin(var) * 180/Pi;
 			break;
 		}
+		case 14:
+		{
+			return acos(var) * 180/Pi;
+			break;
+		}
     	default: return 0;
 	}

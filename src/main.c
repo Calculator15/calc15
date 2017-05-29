@@ -4,8 +4,8 @@
 int main()
 {
 	int i, n, Option;
-	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division		\n5.Factorial	 \n6.Sin(x)		\n7.Cos(x)		\n8.Tg(x)		\n9.Ctg(x)		\n10.Arcsin(x)	11.Exit\n");
-	while (Option != 11)
+	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division		\n5.Factorial	 \n6.Sin(x)		\n7.Cos(x)		\n8.Tg(x)		\n9.Ctg(x)		\n10.Arcsin(x)		\n11.Arccos(x)	12.Exit\n");
+	while (Option != 12)
 	{	
 		printf("\nSelect one of the actions:  ");
 		scanf("%d", &Option);
@@ -93,6 +93,13 @@ int main()
 			printf("Enter the value of the sin(x): ");
 			scanf("%f", &sinus);
 			printf("Arcsin(x)= %.2f\n", Trigonometry(Option, sinus));
+		}
+		if (Option == 11)
+		{
+			float cosine;
+			printf("Enter the value of the cos(x): ");
+			scanf("%f", &cosine);
+			printf("Arccos(x) = %.2f\n", Trigonometry(Option, cosine));
 		}
 	}
 	return 0;
