@@ -4,8 +4,8 @@
 int main()
 {
 	int i, n, Option;
-	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division		\n5.Factorial	 \n6.The solution of the quadratic equation	\n7.Sin(x)		\n8.Cos(x)		\n9.Tg(x)		\n10.Ctg(x)		\n11.Arcsin(x)		\n12.Arccos(x)		\n13.Arctg(x)		\n14.Arcctg(x)	15.Exit\n");
-	while (Option != 15)
+	printf("***************CALCULATOR***************\n\n1.Addition		9.Sin(x)		13.Arcsin(x) \n2.Subtraction		10.Cos(x)		14.Arccos(x)\n3.Multiplication        11.Tg(x)		15.Arctg(x)\n4.Division	        12.Ctg(x)		16.Arcctg(x)\n5.Factorial\n6.The solution of the quadratic equation\n7.Сalculate the percentage of the number\n8.x^y\n\n				17. Exit\n");
+	while (Option != 17)
 	{	
 		printf("\nSelect one of the actions:  ");
 		scanf("%d", &Option);
@@ -35,8 +35,7 @@ int main()
 			for (i = 0; i < n; i++)
 				scanf("%f", &A[i]);
 			printf("Answer: %.2f\n", Multiplication(A, n));
-		}
-			
+		}	
 		if (Option == 4)
 		{
 			float a, b;
@@ -68,19 +67,33 @@ int main()
 		}
 		if (Option == 7)
 		{
+			float value, percent;
+			printf("Enter a number and percentage: ");
+			scanf("%f %f", &value, &percent);
+			printf("The percentage of the number = %.2f\n", PercentageOfValue(value, percent));
+		}
+		if (Option == 8)
+		{
+			float x, y;
+			printf("Enter the number and extent: ");
+			scanf("%f %f", &x, &y);
+			printf("x^y = %.2f\n", Exponentiation(x,y));
+		}
+		if (Option == 9)
+		{
 			float angle;
 			printf("Enter the angle value: ");
 			scanf("%f",&angle);
 			printf("Sin(x) = %.3f\n", Trigonometry(Option, angle));
 		}
-		if (Option == 8)
+		if (Option == 10)
 		{
 			float angle;
 			printf("Enter the angle value: ");
 			scanf("%f",&angle);
 			printf("Cos(x) = %.3f\n", Trigonometry(Option, angle));
 		}
-		if (Option == 9)
+		if (Option == 11)
 		{
 			float angle;
 			printf("Enter the angle value: ");
@@ -90,7 +103,7 @@ int main()
 			else
 				printf("Tg(x) = %.3f\n", Trigonometry(Option, angle));
 		}
-		if (Option == 10)
+		if (Option == 12)
 		{
 			float angle;
 			printf("Enter the angle value: ");
@@ -100,28 +113,28 @@ int main()
 			else
 				printf("Ctg(x) = %.3f\n", Trigonometry(Option, angle));
 		}
-		if (Option == 11)
+		if (Option == 13)
 		{
 			float sinus;
 			printf("Enter the value of the sin(x): ");
 			scanf("%f", &sinus);
 			printf("Arcsin(x)= %.2f\n", Trigonometry(Option, sinus));
 		}
-		if (Option == 12)
+		if (Option == 14)
 		{
 			float cosine;
 			printf("Enter the value of the cos(x): ");
 			scanf("%f", &cosine);
 			printf("Arccos(x) = %.2f\n", Trigonometry(Option, cosine));
 		}
-		if (Option == 13)
+		if (Option == 15)
 		{
 			float tangent;
 			printf("Enter the value of the tg(x): ");
 			scanf("%f", &tangent);
 			printf("Arctg(x) = %.2f\n", Trigonometry(Option, tangent));
 		}
-		if (Option == 14)
+		if (Option == 16)
 		{
 			float cotangent;
 			printf("Enter the value of the ctg(x): ");
@@ -131,4 +144,3 @@ int main()
 	}
 	return 0;
 }
-

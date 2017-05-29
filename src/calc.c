@@ -69,17 +69,17 @@ float Trigonometry(int Option, float var)
 {
 	switch(Option)
 	{
-		case 7:
+		case 9:
 		{
 			return sin(var * Pi/180);
 			break;
 		}
-		case 8:
+		case 10:
 		{
 			return cos(var * Pi/180);
 			break;
 		}
-		case 9:
+		case 11:
 		{
 			if (var == 90 || var == 270)
 			{
@@ -92,7 +92,7 @@ float Trigonometry(int Option, float var)
 				break;
 			}
 		}
-		case 10:
+		case 12:
 		{
 			if (var == 0 || var == 180 || var == 360)
 			{
@@ -105,25 +105,35 @@ float Trigonometry(int Option, float var)
 				break;
 			}
 		}
-		case 11:
+		case 13:
 		{
 			return asin(var) * 180/Pi;
 			break;
 		}
-		case 12:
+		case 14:
 		{
 			return acos(var) * 180/Pi;
 			break;
 		}
-		case 13:
+		case 15:
 		{
 			return atan(var) * 180/Pi;
 			break;
 		}
-		case 14:
+		case 16:
 		{
 			return (Pi/2 - atan(var)) * 180/Pi;
 		}
     	default: return 0;
 	}
+}
+
+float PercentageOfValue(float value, float percent)
+{
+	return value / 100 * percent;
+}
+
+float Exponentiation(float x, float y)
+{
+	return pow(x, y);
 }
