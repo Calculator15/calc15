@@ -4,8 +4,8 @@
 int main()
 {
 	int i, n, Option;
-	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division		\n5.Factorial	 \n6.Sin(x)		\n7.Cos(x)		\n8.Tg(x)	9.Exit\n");
-	while (Option != 9)
+	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division		\n5.Factorial	 \n6.Sin(x)		\n7.Cos(x)		\n8.Tg(x)		\n9.Ctg(x)	10.Exit\n");
+	while (Option != 10)
 	{	
 		printf("\nSelect one of the actions:  ");
 		scanf("%d", &Option);
@@ -76,6 +76,16 @@ int main()
 				printf("Does not exist");
 			else
 				printf("Tg(x) = %.3f\n", Trigonometry(Option, angle));
+		}
+		if (Option == 9)
+		{
+			float angle;
+			printf("Enter the angle value: ");
+			scanf("%f",&angle);
+			if (Trigonometry(Option, angle) == 0)
+				printf("Does not exist");
+			else
+				printf("Ctg(x) = %.3f\n", Trigonometry(Option, angle));
 		}
 	}
 	return 0;

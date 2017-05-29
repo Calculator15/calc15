@@ -70,5 +70,18 @@ float Trigonometry(int Option, float var)
 				break;
 			}
 		}
+		case 12:
+		{
+			if (var == 0 || var == 180 || var == 360)
+			{
+				return 0;
+				break;
+			}
+			else
+			{
+				return 1/tan(var * Pi/180);
+				break;
+			}
+		}
     	default: return 0;
 	}
