@@ -98,5 +98,9 @@ float Trigonometry(int Option, float var)
 			return atan(var) * 180/Pi;
 			break;
 		}
+		case 16:
+		{
+			return (Pi/2 - atan(var)) * 180/Pi;
+		}
     	default: return 0;
 	}

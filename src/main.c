@@ -4,8 +4,8 @@
 int main()
 {
 	int i, n, Option;
-	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division		\n5.Factorial	 \n6.Sin(x)		\n7.Cos(x)		\n8.Tg(x)		\n9.Ctg(x)		\n10.Arcsin(x)		\n11.Arccos(x)		\n12.Arctg	13.Exit\n");
-	while (Option != 13)
+	printf("***************CALCULATOR***************\n\n1.Addition		\n2.Subtraction		\n3.Multiplication        \n4.Division		\n5.Factorial	 \n6.Sin(x)		\n7.Cos(x)		\n8.Tg(x)		\n9.Ctg(x)		\n10.Arcsin(x)		\n11.Arccos(x)		\n12.Arctg(x)		\n13.Arcctg(x)	14.Exit\n");
+	while (Option != 14)
 	{	
 		printf("\nSelect one of the actions:  ");
 		scanf("%d", &Option);
@@ -107,6 +107,13 @@ int main()
 			printf("Enter the value of the tg(x): ");
 			scanf("%f", &tangent);
 			printf("Arctg(x) = %.2f\n", Trigonometry(Option, tangent));
+		}
+		if (Option == 13)
+		{
+			float cotangent;
+			printf("Enter the value of the ctg(x): ");
+			scanf("%f", &cotangent);
+			printf("Arcctg(x) = %.2f\n", Trigonometry(Option, cotangent));
 		}
 	}
 	return 0;
