@@ -101,3 +101,120 @@ CTEST (arithmetic_operation_6, equation)
     expected = -3;
     ASSERT_EQUAL_U(expected, result);
 }
+
+CTEST (arithmetic_operation_7, sin)
+{
+    float result = Trigonometry (9,30);
+    float expected = 0.5;
+    ASSERT_EQUAL_U(expected, result);
+    
+    result = Trigonometry (9, 90);
+    expected = 1;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (9, 45);
+    expected = 0.707;
+    ASSERT_EQUAL_U(expected, result);
+}
+
+CTEST (arithmetic_operation_8, cos)
+{
+    float result = Trigonometry (10,30);
+    float expected = 0.866;
+    ASSERT_EQUAL_U(expected, result);
+    
+    result = Trigonometry (10, 90);
+    expected = 0;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (10, 45);
+    expected = 0.707;
+    ASSERT_EQUAL_U(expected, result);
+}
+
+CTEST (arithmetic_operation_9, tg)
+{
+    float result = Trigonometry (11,30);
+    float expected = 0.577;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (11,39);
+    expected = 0.81;
+    ASSERT_EQUAL_U(expected, result);
+
+}
+
+CTEST (arithmetic_operation_10, ctg)
+{
+    float result = Trigonometry (12,68);
+    float expected = 0.404;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (12, 45);
+    expected = 1;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (12, 90);
+    expected = 0;
+    ASSERT_EQUAL_U(expected, result);
+}
+
+CTEST (arithmetic_operation_11, arcsin)
+{
+    float result = Trigonometry (13,1);
+    float expected = 90;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (13, 0.5);
+    expected = 30;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (13, 0.789);
+    expected = 52.09;
+    ASSERT_EQUAL_U(expected, result);
+}
+
+CTEST (arithmetic_operation_12, arccos)
+{
+    float result = Trigonometry (14, 0.356);
+    float expected = 69.15;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (14, 0.5);
+    expected = 60;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (14, 0.25);
+    expected = 75.52;
+    ASSERT_EQUAL_U(expected, result);
+}
+
+CTEST (arithmetic_operation_13, arctg)
+{
+    float result = Trigonometry (15, 7.69);
+    float expected = 82.59;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (15, 0.8);
+    expected = 38.66;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (15, 1);
+    expected = 45;
+    ASSERT_EQUAL_U(expected, result);
+}
+
+CTEST (arithmetic_operation_14, arcctg)
+{
+    float result = Trigonometry (16, 5.35);
+    float expected = 10.58;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (16, 0.5);
+    expected = 63.43;
+    ASSERT_EQUAL_U(expected, result);
+
+    result = Trigonometry (16, 30);
+    expected = 1.91;
+    ASSERT_EQUAL_U(expected, result);
+}
