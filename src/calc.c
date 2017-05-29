@@ -57,5 +57,18 @@ float Trigonometry(int Option, float var)
 			return cos(var * Pi/180);
 			break;
 		}
+		case 11:
+		{
+			if (var == 90 || var == 270)
+			{
+				return 0;
+				break;
+			}
+			else
+			{
+				return tan(var * Pi/180);
+				break;
+			}
+		}
     	default: return 0;
 	}
