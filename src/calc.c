@@ -52,5 +52,10 @@ float Trigonometry(int Option, float var)
 			return sin(var * Pi/180);
 			break;
 		}
+		case 10:
+		{
+			return cos(var * Pi/180);
+			break;
+		}
     	default: return 0;
 	}
